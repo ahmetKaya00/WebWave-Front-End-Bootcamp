@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            background-color: aliceblue;
+        }
+        p{
+            color: red;
+        }
+        .highlight{
+            color: blue;
+        }
+        #unique{
+            color: purple;
+        }
+        p{
+            color: green;
+        }
+        div p{
+            color: blue;
+        }
+        div p, span{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <p>Lorem, ipsum dolor.</p>
+    </div>
+    <span>Lorem, ipsum.</span>
+    <p>Lorem, ipsum dolor.</p>
+    <p class="highlight">Lorem, ipsum dolor.</p>
+    <p id="unique" class="highlight">Lorem, ipsum dolor.</p>
+</body>
+</html>
