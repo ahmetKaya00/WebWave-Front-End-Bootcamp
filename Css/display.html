@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .inline-block{
+            display: inline-block;
+            width: 200px;
+            height: 100px;
+            background-color: bisque;
+            margin-right: 10px;
+            margin-bottom: 50px;
+        }
+        .none{
+            display: none;
+            width: 200px;
+            height: 100px;
+            background-color: bisque;
+            margin-right: 10px;
+        }
+        .container-flex{
+            display: flex;
+            justify-content: space-between;
+            background-color: blueviolet;
+            padding: 10px;
+        }
+        .flex-item{
+            background-color: antiquewhite;
+            padding: 20px;
+            margin: 5px;
+        }
+        .container-grid{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+            padding: 10px;
+            background-color: brown;
+            margin-top: 50px;
+        }
+        .grid-item{
+            background-color: yellow;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="inline-block">Bu bir inline-block</div>
+    <div class="inline-block">Bu bir inline-block</div>
+    
+    <div class="none">Bu bir none</div>
+
+    <div class="container-flex">
+        <div class="flex-item">Box 1</div>
+        <div class="flex-item">Box 2</div>
+        <div class="flex-item">Box 3</div>
+        <div class="flex-item">Box 4</div>
+        <div class="flex-item">Box 5</div>
+        <div class="flex-item">Box 6</div>
+    </div>
+    <div class="container-grid">
+        <div class="grid-item">Box 1</div>
+        <div class="grid-item">Box 2</div>
+        <div class="grid-item">Box 3</div>
+        <div class="grid-item">Box 3</div>
+        <div class="grid-item">Box 3</div>
+        <div class="grid-item">Box 3</div>
+        <div class="grid-item">Box 3</div>
+        <div class="grid-item">Box 3</div>
+        <div class="grid-item">Box 3</div>
+    </div>
+</body>
+</html>
