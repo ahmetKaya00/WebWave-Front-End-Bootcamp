@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //Boş Dizi
+        let emptyArray = [];
+        console.log("Boş dizi: ", emptyArray);
+        
+        //Karışık Dizi
+        let mixedArray = [1, "Merhaba", true, null];
+        console.log("Karışık dizi: ", mixedArray);
+
+        //Dizi uzunluğu
+        let arrayLength = mixedArray.length;
+        console.log("Dizinin uzunluğu: ", arrayLength);
+
+        // Dizi Elemanlarına Ulaşma
+        let firstElement = mixedArray[0];
+        console.log("İlk eleman: ", firstElement);
+        let lastElement = mixedArray[mixedArray.length - 1];
+        console.log("Son eleman: ", lastElement);
+
+        // Diziye eleman ekleme ve çıkarma
+
+        mixedArray.push("Yeni eleman"); // sonuna ekle
+        console.log("Son elemanlı hali: ", mixedArray);
+
+        mixedArray.unshift("İlk Eleman"); // başına ekle
+        console.log("İlk elemanlı hali: ", mixedArray);
+
+        let removeElement = mixedArray.pop();// sondan çıkarma
+        console.log("Sondan Eleman Çıkarıldı: ", mixedArray, "Çıkarılan eleman: ",removeElement);
+
+        removeElement = mixedArray.shift();
+        console.log("Baştan Eleman Çıkarıldı: ", mixedArray, "Çıkarılan eleman: ",removeElement);
+
+        //Dizi elemanı güncelleme
+        mixedArray[1] = "Güncellenen Eleman";
+        console.log("Güncellenmiş dizi: ", mixedArray);
+
+        let numberArray = [5,3,7,1,2];
+        console.log("Orjinal sayı dizisi: ",numberArray);
+
+        numberArray.sort((a,b) => a-b);// Sıralama
+        console.log("Sıralı Liste: ",numberArray);
+
+        numberArray.reverse();
+        console.log("Ters çevrilmiş dizi: ", numberArray);
+
+        // Diziyi Bölme ve Birleştirme
+
+        let slicedArray = mixedArray.slice(0,3); // Bölme
+        console.log("Dilimlenmiş dizi: ",slicedArray);
+
+        let combinedArray = numberArray.concat(slicedArray);//Birleştirme
+        console.log("Birleştirilmiş dizi: ", combinedArray);
+
+        // Dizi içerisinde eleman arama
+
+        let index = mixedArray.indexOf("Güncellenen Eleman");
+        console.log("'Güncellenen eleman' indeksi: ", index);
+
+        let isPresent = mixedArray.includes("Güncellenen Eleman");
+        console.log("'Güncellenen eleman' dizide var mı? ", isPresent);
+
+        
+    </script>
+</body>
+</html>

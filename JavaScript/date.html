@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let now = new Date();
+        console.log("Şuan ki tarih ve saat: ", now);
+
+        let specificDate = new Date('August 19, 2024 22:23:24');
+        console.log("Spesifik Zaman: ", specificDate);
+
+        let specificDate2 = new Date(2024,7,19,23,15,20,0);
+        console.log("Spesifik Zaman: ", specificDate2);
+
+        let year = now.getFullYear();
+        console.log("Yıl: ", year);
+
+        let month = now.getMonth();
+        console.log("Yıl: ", month + 1);
+
+        now.setFullYear(2025);
+        console.log("Yeni yıl: ", now);
+
+        //Farklı zaman dilimlerini hesaplama
+
+        let startDate = new Date('August 1, 2024');
+        let endDate = new Date('August 14, 2024');
+        let timeDiff = endDate - startDate;// Milisaniye
+
+        let daysDiff = timeDiff / (1000 * 60 * 60 *24);
+
+        console.log(daysDiff);
+
+    </script>
+</body>
+</html>

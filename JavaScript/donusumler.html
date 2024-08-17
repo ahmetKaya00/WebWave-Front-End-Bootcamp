@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // STR to NUM
+        let str = "123";
+        let num = Number(str);
+        console.log(typeof(num));
+
+        let floatStr = "123.45";
+        let intNum = parseInt(floatStr);
+        console.log(intNum);
+
+        let floatNum = parseFloat(floatStr);
+        console.log(floatNum);
+
+        //To STR
+
+        let numValue = 465;
+        let strValue = String(numValue);
+        console.log(strValue);
+
+        let boolValue = true;
+        let strBool = boolValue.toString();
+        console.log(strBool);
+
+        //To Boolean
+
+        let srtValue2 = "Hello";
+        let boolValue2 = Boolean(srtValue2);
+        console.log(boolValue2);
+
+        let zeroValue = 0;
+        let boolZero = Boolean(zeroValue);
+        console.log(boolZero);
+
+        // Kapalı tür Dönüştürme
+
+        let result = 5 + "5";
+        console.log(result);
+
+        let subtractResult = "10" - 2;
+        console.log(subtractResult);
+
+        let boolSum = true + 5;
+        console.log(boolSum);
+
+        let boolProduct = false * 10;
+        console.log(boolProduct);
+
+    </script>
+</body>
+</html>

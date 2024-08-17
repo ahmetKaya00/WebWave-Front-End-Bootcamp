@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Global Scope
+
+        let globalVar = "Bu bir global değişken";
+
+        function myfunction(){
+            console.log(globalVar);
+        }
+        myfunction();
+        console.log(globalVar);
+
+        // Function Scope 
+
+        function myfunction2(){
+            let localVar = "Bu bir Funtion değişken";
+            console.log(localVar);
+        }
+
+        myfunction2();
+       // console.log(localVar); HATA VERİR
+
+       //BLOCK SCOPE
+
+       if(true){
+        let blockVar = "Bu bir Block değişkendir";
+        console.log(blockVar);
+       }
+      // console.log(blockVar); HATA VERİR
+    </script>
+</body>
+</html>

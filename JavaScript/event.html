@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button id="myButton">Bana Tıkla!</button>
+
+    <div id="hoverDiv" style="width: 200px; height: 200px; background-color: lightblue;">Bu kutu üzerinde gezin!</div>
+
+    <input type="text" id="textInput" placeholder="Bir şeyler yazın...">
+<script>
+    /* SÖZ DİZİMİ
+    element.addEventListener(event, function,useCapture);
+    */
+
+   //Button tıklama olayı
+    document.getElementById("myButton").addEventListener("click",function(){
+        alert("Butona Tıklandı!");
+    });
+
+    document.getElementById("hoverDiv").addEventListener("mouseover", function(){
+        this.style.backgroundColor = "yellow";
+    });
+
+    document.getElementById("textInput").addEventListener("keydown",function(){
+        console.log("Basılan tuş: " + event.key);
+    });
+
+    function showAlert(){
+        alert("Kaldırıldı.");
+    }
+
+    document.getElementById("myButton").addEventListener("click",showAlert);
+
+    document.getElementById("myButton").removeEventListener("click",showAlert);
+    
+</script>
+</body>
+</html>
