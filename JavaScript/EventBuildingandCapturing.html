@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="outerDiv" style="padding: 50px; background-color: lightblue;">Outer Div</div>
+
+    <div id="innerDiv" style="padding: 50px; background-color: lightcoral;">Inner Div</div>
+
+    <script>
+        //Event Bubbling and Capturing
+        document.getElementById("outerDiv").addEventListener("click", function(){
+            alert("Outer Div Clicked!");
+        }, true); // Capturing özelliği aktif
+
+        document.getElementById("innerDiv").addEventListener("click", function(){
+            alert("Inner Div Clicked!");
+        });
+
+        
+    </script>
+</body>
+</html>

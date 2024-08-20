@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #header{
+            color: blue;
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 id="header">Hello!</h1>
+    <p>Lorem, ipsum dolor.</p>
+    <button id="btn">Click</button>
+
+    <script>
+        let header = document.getElementById("header");
+        let paragraph = document.querySelector('p');
+        let button = document.getElementById("btn");
+
+        //Element içeriği değiştirme
+        header.textContent = "Yeni Header.";
+        paragraph.innerHTML = "<strong>Bu bir kalın yazıdır.</strong>";
+
+        //Style Özelliklerini Değiştirme
+        header.style.color = "red";
+        header.style.fontSize = "24px";
+        paragraph.style.backgroundColor = "yellow";
+
+        //DOM Gezinti
+        let body = document.body;
+        let firsChild = body.firstChild;
+        console.log(firsChild);
+
+        //Yeni bir element ekleme
+        let newParagraph = document.createElement("p");
+        newParagraph.id = "newParagraph";
+        newParagraph.textContent = "Yeni paragraf";
+        document.body.appendChild(newParagraph);
+
+        //Element Silme
+        document.body.removeChild(header);
+
+        //Element Özellikleri
+        let link = document.createElement("a");
+        link.setAttribute("href", "https://www.techcareer.net/");
+        link.textContent = "Ziyaret Et!";
+        document.body.appendChild(link);
+
+        //Event Dinleyici Ekleme
+        button.addEventListener("click", function(){
+            alert("Button clicked!");
+        });
+
+        //Dinemik element ile çalışmak
+        let ul = document.createElement("ul");
+        for(let i = 1; i<=5;i++){
+            let li = document.createElement("li");
+            li.textContent = `Item ${i}`;
+            ul.appendChild(li);
+        }
+        document.body.appendChild(ul);
+    </script>
+</body>
+</html>

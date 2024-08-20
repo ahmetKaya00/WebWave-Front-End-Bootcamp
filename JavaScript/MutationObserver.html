@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="content">
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <button id="changeContent">Change Content</button>
+
+    <script>
+        const content = document.getElementById("content");
+        const button = document.getElementById("changeContent");
+
+        const observer = new MutationObserver((mutationList) =>{
+            for (let mutation of mutationList){
+                if(mutation.type === "childList"){
+                    console.log("Content change!");
+                }
+            }
+        });
+
+        observer.observe(content, {childList: true});
+
+        button.addEventListener("click", ()=>{
+            content.innerHTML = "<p>New Content</p>";
+        });
+    </script>
+</body>
+</html>
