@@ -1,0 +1,22 @@
+.product-card{
+    width: 100%;
+    max-width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+.product-img{
+    max-height: 200px;
+    object-fit: contain;
+}
+.product-title{
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.product-text{
+    margin-bottom: auto;
+}

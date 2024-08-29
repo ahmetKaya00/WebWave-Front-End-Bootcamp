@@ -6,6 +6,7 @@ import ProductPage from './pages/ProductPage';
 import {BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Container } from "reactstrap";
 import { CartProvider } from "./context/CartContext";
+import alertify from "alertifyjs";
 
 function App() {
   return (
